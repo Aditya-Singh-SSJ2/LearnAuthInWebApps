@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h2>Hello @Model.username (@Model.userEmail)</h2>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>The random number generated on page load is - @Model.displayInteger</p>
+
+    <div class="row">
+            <div class="col">
+                <p>This is me testing</p>
+                <form asp-page="Index" class="form">
+                    <div class="form-group mb-3">
+                        <label for="name">Test Type Here</label>
+                        <input type="number" asp-for="@Model.myNumber" class="form-control" />
+                    </div>
+                    <input type="submit" class="btn btn-primary" />
+                </form>
+                <hr />
+                <p>@Model.displayInteger</p>
+            </div>
+        </div
+</div>
